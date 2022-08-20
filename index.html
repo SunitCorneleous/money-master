@@ -10,7 +10,7 @@
   <body>
     <!-- header -->
     <header>
-      <h1 class="text-center my-8 text-5xl font-bold text-sky-600">
+      <h1 class="text-center my-8 text-3xl lg:text-5xl font-bold text-sky-600">
         Money Master $
       </h1>
     </header>
@@ -18,15 +18,81 @@
     <main>
       <section class="flex lg:flex-row flex-col-reverse m-6">
         <div class="lg:w-1/2 m-4">
-          <img src="./images/side-image.jpg" alt="" srcset="" />
+          <img src="./images/side-image.jpg" class="object-cover h-4/5" />
         </div>
-        <div class="lg:w-1/2 m-4 bg-gray-100 rounded-md">
+        <div class="lg:w-1/2 m-4 bg-gray-100 rounded-md p-4">
           <!-- income-section -->
-          <div class="text-center p-8">
-            <h3 class="text-2xl font-semibold">Income</h3>
+          <div class="text-center">
+            <!-- income -->
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Income</h3>
+              <label for="income" class="mr-3">Income:</label>
+              <input
+                type="number"
+                name="income"
+                class="bg-gray-200 rounded-sm py-1 px-2 w-1/2"
+              />
+            </div>
+            <!-- expenses -->
+            <div>
+              <h3 class="text-2xl font-semibold mt-3">Expenses</h3>
+              <label for="food" class="mr-3">Food:</label>
+              <input
+                type="number"
+                name="food"
+                class="bg-gray-200 rounded-sm my-3 py-1 px-2 w-1/2"
+              />
+              <br />
+              <!-- rent -->
+              <label for="rent" class="mr-3">Rent:</label>
+              <input
+                type="number"
+                name="rent"
+                class="bg-gray-200 rounded-sm my-3 py-1 px-2 w-1/2"
+              />
+              <br />
+              <!-- clothes -->
+              <label for="clothes" class="mr-3">Clothes:</label>
+              <input
+                type="number"
+                name="clothes"
+                class="bg-gray-200 rounded-sm my-3 py-1 px-2 w-1/2"
+              />
+              <!-- calculate button -->
+              <button
+                class="block mx-auto my-3 px-8 py-2 bg-blue-400 hover:bg-blue-500 rounded font-semibold text-white text-xl"
+              >
+                Calculate
+              </button>
+              <h2 class="font-bold text-xl my-5">
+                Total Expenses: <span id="total-expenses">0</span>
+              </h2>
+              <h2 class="font-bold text-xl my-5">
+                Balance : <span id="total-balance">0</span>
+              </h2>
+            </div>
           </div>
           <!-- savings-section -->
-          <div class=""></div>
+          <div class="text-center">
+            <label for="save" class="mr-3">Save:</label>
+            <input
+              type="number"
+              name="save"
+              class="bg-gray-200 rounded-sm py-1 px-2 w-24 mx-2 text-center"
+            />
+            <span>%</span>
+            <button
+              class="mx-auto my-3 mx-3 px-8 py-1 bg-blue-400 hover:bg-blue-500 rounded font-semibold text-white"
+            >
+              Save
+            </button>
+            <h2 class="font-bold text-xl my-5">
+              Savings Amount: <span id="saving-amount">0</span>
+            </h2>
+            <h2 class="font-bold text-xl my-5">
+              Remaining Balance: <span id="remaining-balance">0</span>
+            </h2>
+          </div>
         </div>
       </section>
     </main>
